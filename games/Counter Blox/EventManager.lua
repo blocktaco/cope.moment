@@ -37,7 +37,6 @@ end
 
 function handleRoundStartEvent()
     if not Status.Preparation.Value and not Status.RoundOver.Value then
-        print('Round start')
         table.clear(DamageLogData)
         Events.RoundStart:Fire() 
     end
@@ -45,7 +44,6 @@ end
 
 function handleRoundEndEvent()
     if Status.RoundOver.Value then
-        print('Round end')
         Events.RoundEnd:Fire() 
     end
 end
