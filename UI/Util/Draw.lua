@@ -35,7 +35,7 @@ end
 function Draw:Square(position, size, color, transparency)
     local square = Drawing.new('Square')
     square.Visible = true
-    square.Transparency = transparency
+    square.Transparency = transparency or 1
     square.Thickness = 1
     square.Filled = true
     square.Size = size
@@ -51,6 +51,7 @@ function Draw:Image(position, size, data, transparency)
     image.Size = size
     image.Position = position
     image.Data = Draw:HandleImageCache(data)
+    image.Transparency = transparency or 1
 end
 
 return Draw;
