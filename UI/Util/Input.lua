@@ -16,7 +16,7 @@ end
 
 userInputService.InputBegan:Connect(function(input)
 	for _, callback in next, Input.Listening do
-		callback()
+		callback(input)
 	end
 end)
 
