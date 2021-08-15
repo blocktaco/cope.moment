@@ -3,8 +3,8 @@ local Input = {}
 Input.Listening = {}
 
 
-function Input:AddListener(listenerName, callback)
-	Input.Listening[listenerName] = callback
+function Input:AddListener(callback)
+	Input.Listening[#Input.Listening + 1] = callback
 end	
 
 function Input.Hovered(drawing)
